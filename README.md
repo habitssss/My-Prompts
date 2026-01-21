@@ -45,13 +45,23 @@ My-Prompts/
 - 区间分析和数据流获取
 
 **配置方式：**
+
 ```bash
-# 安装 mcpc CLI
+# 1. 复制环境变量模板
+cp .env.example .env
+
+# 2. 编辑 .env 文件，填入你的 API Key
+# - EXA_API_KEY: https://exa.ai/dashboard 获取
+# - INTERVALS_API_KEY & INTERVALS_ATHLETE_ID: https://intervals.icu/settings 获取
+
+# 3. 安装 mcpc CLI（如需要）
 npm install -g @apify/mcpc
 
-# 配置 mcp.json (位置: ~/.pi/agent/mcp.json)
-# 需要设置 API_KEY 和 ATHLETE_ID
+# 4. 配置 mcp.json (位置: ~/.pi/agent/mcp.json)
+# 确保 mcp.json 中的 API_KEY 使用环境变量引用: "${EXA_API_KEY}"
 ```
+
+> ⚠️ **重要安全提示**: 请勿将 `.env` 文件提交到版本控制系统中，`.env` 已被添加到 `.gitignore`。
 
 ---
 

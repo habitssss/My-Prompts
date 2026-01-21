@@ -11,7 +11,7 @@
       ],
       "env": {
         "INTERVALS_API_BASE_URL": "https://intervals.icu/api/v1",
-        "API_KEY": "${EXA_API_KEY}",
+        "API_KEY": "${INTERVALS_API_KEY}",
         "ATHLETE_ID": "i431726",
         "LOG_LEVEL": "INFO"
       }
